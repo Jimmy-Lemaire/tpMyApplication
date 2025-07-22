@@ -127,17 +127,20 @@ footer {
 /* Mobile (par défaut, ou définir des styles spécifiques) */
 /* Exemple pour le header sur mobile */
 .burger-menu {
+    display:none;
     /* Caché sur desktop */
 }
 @media (max-width: 768px) {
     /* Header */
     .nav-links {
+        display: none;
         /* Cacher la navigation normale sur mobile */
         /* Empiler les liens si affichés (ex: via JS) */
   
 
     }
     .burger-menu {
+        display: block;
        /* Afficher l'icône burger sur mobile */
       
 
@@ -145,10 +148,14 @@ footer {
 
     /* Hero Section */
     .hero-section {
+        display:flex;
+        flex-direction: column;
+        
        /* Empiler contenu et image sur mobile */
   
     }
     .hero-image img {
+        
         /* Ajustement taille image sur mobile */
     }
 
