@@ -155,17 +155,19 @@ footer {
   
     }
     .hero-image img {
-        
+
         /* Ajustement taille image sur mobile */
     }
 
     /* Feature Cards Grid - ajustement pour tablette/mobile */
     .feature-cards-grid {
+        grid-template-columns: repeat(2,1fr);
         /* 2 colonnes sur tablette, 1 sur mobile */
     }
     /* Sur très petit écran, une seule colonne */
     @media (max-width: 480px) {
         .feature-cards-grid {
+            grid-template-columns:1fr
            
         }
     }
