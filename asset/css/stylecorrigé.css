@@ -1,0 +1,202 @@
+* =========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* =========== NAVBAR ========== */
+
+header {
+  background: linear-gradient(90deg, #4a90e2, #145eab);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f7c948;
+}
+
+/*--------------- MA SUPER ANIMATION LE LA MORT--------*/
+/* Animation fadeInUp */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+/* ============== BANNIERE DE BIENVENUE=============== */
+
+.hero {
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  color: white;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  animation: fadeInUp 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.hero button {
+  background: radial-gradient(circle at center, #f7c948, #d8a31d);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeInUp 1s ease 1s forwards;
+  opacity: 0;
+}
+
+.hero button:hover {
+  background: radial-gradient(circle at center, #d8a31d, #f7c948);
+  transform: scale(1.05);
+}
+
+/* ===== SECTION THÉMATIQUES ===== */
+.themes {
+  padding: 4rem 2rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.themes-grid {
+  display: grid;
+  gap: 1.5rem;
+  /*grid-template-columns: repeat(3,1fr);*/
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.themes h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2rem;
+  color: #4a90e2;
+}
+
+.theme-card {
+  background: white;
+  cursor: pointer;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+.theme-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-card img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.theme-card h3 {
+  color: #4a90e2;
+  margin-bottom: 0.5em;
+}
+/* ===== SECTION À PROPOS ===== */
+.about {
+  display: flex;
+  max-width: 1100px;
+  gap: 3rem;
+  margin: 4rem auto;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  /*flex: 2;*/
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* ===== FOOTER ===== */
+        footer {
+            background: #145eab;
+            color: white;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .about{
+    flex-direction:column;
+  }
+}
+@media (max-width: 768px){
+  nav{
+    flex-direction:column;
+  }
+
+}
